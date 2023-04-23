@@ -11,11 +11,9 @@ export class Article {
 
   voteUp() {
     this.votes += 1;
-    return false;
   }
   voteDown() {
     this.votes -= 1;
-    return false;
   }
   // domain() is  tility function that extracts
   // the domain from  URL, which we'll explain shortly
