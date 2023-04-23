@@ -9,6 +9,9 @@
     <a class="ui large header" href="{{ myArticle.link }}">
       {{ myArticle.title }}
     </a>
+    <div class="meta">
+      <span> ({{ myArticle.domain() }}) </span>
+    </div>
     <div class="extra">
       <span>
         <a href (click)="voteUp()">

@@ -17,14 +17,14 @@ export class Article {
   }
   // domain() is  tility function that extracts
   // the domain from  URL, which we'll explain shortly
-  // domain(): string {
-  //   try {
-  //     // .eg. http://foo.com/path/to/bar
-  //     const domainAndPath: string = this.link.split('//')[1];
-  //     // .eg. foo.com/path/to/bar
-  //     return domainAndPath.split('/')[0];
-  //   } catch (err) {
-  //     // return null;
-  //   }
-  // }
+  domain(): string {
+    try {
+      // .eg. http://foo.com/path/to/bar
+      const domainAndPath: string = this.link.split('//')[1];
+      // .eg. foo.com/path/to/bar
+      return domainAndPath.split('/')[0];
+    } catch (err) {
+      return null!;
+    }
+  }
 }
