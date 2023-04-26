@@ -1,0 +1,12 @@
+<div class="ui yellow message">
+  <i class="star icon"></i>
+  Featured Products
+</div>
+<div class="ui items">
+  <app-product-row
+    *ngFor="let myProduct of productList"
+    [product]="myProduct"
+    (click)="clicked(myProduct)"
+    [class.selected]="isSelected(myProduct)"
+  ></app-product-row>
+</div>

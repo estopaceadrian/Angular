@@ -1,1 +1,7 @@
-<div class="inventory-app">products will go here soon</div>
+<div class="ui items grid">
+  <app-product-list
+    [productList]="products"
+    (onProductSelected)="productWasSelected($event)"
+  >
+  </app-product-list>
+</div>
