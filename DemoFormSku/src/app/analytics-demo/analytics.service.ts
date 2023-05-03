@@ -6,5 +6,6 @@ export class AnalyticsService {
   constructor(private implementation: AnalyticsImplementation) {}
   record(metric: Metric): void {
     this.implementation.recordEvent(metric);
+    //
   }
 }
