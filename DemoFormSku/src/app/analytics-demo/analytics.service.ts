@@ -7,5 +7,6 @@ export class AnalyticsService {
   record(metric: Metric): void {
     this.implementation.recordEvent(metric);
     //
+    //
   }
 }
