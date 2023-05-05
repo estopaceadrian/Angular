@@ -8,5 +8,6 @@ export class AnalyticsService {
     this.implementation.recordEvent(metric);
     //
     //
+    //
   }
 }
