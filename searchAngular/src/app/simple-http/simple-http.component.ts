@@ -18,7 +18,7 @@ export class SimpleHttpComponent implements OnInit {
       .get('https://jsonplaceholder.typicode.com/posts/1') //free apis
       .subscribe((data) => {
         this.data = data;
-        this.loading = false;
+        this.loading = false; // set loading off
       });
   }
 }
