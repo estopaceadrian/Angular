@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SimpleHttpComponent implements OnInit {
   data: Object;
-  loading: boolean;
+  loading: boolean; //state of loading
 
   constructor(private http: HttpClient) {}
   ngOnInit(): void {}
