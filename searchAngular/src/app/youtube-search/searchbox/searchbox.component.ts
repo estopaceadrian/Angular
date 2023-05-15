@@ -18,7 +18,7 @@ import { YouTubeSearchService } from '../youtube-search.service';
   />`,
 })
 export class SearchBoxComponent implements OnInit {
-  @Output() loading: EventEmitter<boolean> = new EventEmitter<boolean>();
+  @Output() loading: EventEmitter<boolean> = new EventEmitter<boolean>(); //output
   @Output() results: EventEmitter<SearchResult[]> = new EventEmitter<
     SearchResult[]
   >();
