@@ -40,7 +40,7 @@ export class SearchBoxComponent implements OnInit {
         },
         (err: any) => {
           // on error 1
-          console.log(err);
+          console.log(err); //
           this.loading.emit(false);
         },
         () => {
