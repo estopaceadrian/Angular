@@ -29,7 +29,7 @@ export class SearchBoxComponent implements OnInit {
     Observable.fromEvent(this.el.nativeElement, 'keyup') // keyup
       .map((e: any) => e.target.value)
       .filter((text: string) => text.length > 1)
-      .debounceTime(250)
+      .debounceTime(250)//
       .do(() => this.loading.emit(true)) //search, discarding old events if new input comes in
       .switch()
       .subscribe(
