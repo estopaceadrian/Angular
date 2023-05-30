@@ -21,7 +21,7 @@ import { Observable } from 'rxjs';
 export class SearchBoxComponent implements OnInit {
   @Output() loading: EventEmitter<boolean> = new EventEmitter<boolean>(); //output
   @Output() results: EventEmitter<SearchResult[]> = new EventEmitter<
-    SearchResult[]
+    SearchResult[]//
   >();
 
   constructor(private youtube: YouTubeSearchService, private el: ElementRef) {}
