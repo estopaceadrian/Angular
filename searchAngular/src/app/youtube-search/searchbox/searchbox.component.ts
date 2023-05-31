@@ -21,21 +21,21 @@ import { Observable } from 'rxjs';
 export class SearchBoxComponent implements OnInit {
   @Output() loading: EventEmitter<boolean> = new EventEmitter<boolean>(); //output
   @Output() results: EventEmitter<SearchResult[]> = new EventEmitter<
-    SearchResult[]//
+    SearchResult[] //
   >();
 
   constructor(private youtube: YouTubeSearchService, private el: ElementRef) {}
   ngOnInit(): void {
     Observable.fromEvent(this.el.nativeElement, 'keyup') // keyup
       .map((e: any) => e.target.value)
-      .filter((text: string) => text.length > 1)
-      .debounceTime(250)//
+      .filter((text: string) => text.length > 1) //
+      .debounceTime(250) //
       .do(() => this.loading.emit(true)) //search, discarding old events if new input comes in
       .switch()
       .subscribe(
         (results: SearchResult[]) => {
           //on success
-          this.loading.emit(false);//
+          this.loading.emit(false); //
           this.results.emit(results); //
         },
         (err: any) => {
