@@ -24,7 +24,7 @@ export class SearchBoxComponent implements OnInit {
     SearchResult[] //
   >();
 
-  constructor(private youtube: YouTubeSearchService, private el: ElementRef) {}
+  constructor(private youtube: YouTubeSearchService, private el: ElementRef) {} //
   ngOnInit(): void {
     Observable.fromEvent(this.el.nativeElement, 'keyup') // keyup
       .map((e: any) => e.target.value)
